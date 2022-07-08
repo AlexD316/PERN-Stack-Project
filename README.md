@@ -3,6 +3,6 @@ PERN stands for PostgreSQL, Express, React and Node.js. This tutorial will show 
 
 ## PERN Installation
 PostgreSQL is available to install through dnf:
-``
-sudo dnf install postgresql postgresql-server
-``
+``sudo dnf install postgresql postgresql-server``
+``sudo postgresql-setup --initdb --unit postgresql``
+``sudo systemctl start postgresql``
