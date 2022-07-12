@@ -20,8 +20,29 @@ Choose which version then replace the number with the version you choosed.
 
 ## Configuration
 To start up Node.js and PostgreSQL on system startup, you must do the following:
+This sets postgresql to run at the start of boot.
 ``
+sudo systemctl enable postgresql.service
+``
+To set node to run at the start of boot a systemd service file must be created first for Node.js. Create a new file with this line of code:
+``
+sudo nano /lib/systemd/system/<nameofchoosing>.service
+``
+In that file copy this script with the apporiate names of your file:
+``
+[Unit]
+Description=<Your services description here>
+Documentation=<webserver_dns_name>
+After=network.target
 
+[Service]
+ExecStart=/usr/sbin/node <path_to_node.js_filename>
+Type=simple
+User=<username>
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
 ``
 
 ## Express Installation
