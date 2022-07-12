@@ -1,4 +1,4 @@
-# Setting up PERN on Fedora
+# Setting up PERN on Fedora 32
 PERN stands for PostgreSQL, Express, React and Node.js. This tutorial will show you how to setup the entire PERN stack on Fedora.
 
 ## PERN Installation
@@ -29,7 +29,7 @@ To set node to run at the start of boot a systemd service file must be created f
 sudo nano /lib/systemd/system/<nameofchoosing>.service
 ``
 In that file copy this script with the apporiate names of your file:
-``
+```
 [Unit]
 Description=<Your services description here>
 Documentation=<webserver_dns_name>
@@ -43,7 +43,7 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-``
+```
 
 ## Express Installation
 Make sure that nodejs is already installed. Here are the steps to set up express:
