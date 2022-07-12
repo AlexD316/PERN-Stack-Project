@@ -63,5 +63,5 @@ The use this command finish the set up:
 ```
 npm install express
 ```
-![Our GiF](Untitled video - Made with Clipchamp (2).gif)
+![GIF Example](/clipchamp_snippet.gif)
 
