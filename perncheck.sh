@@ -7,7 +7,7 @@
 
 
 service_check () {
-    if [[ -z "$(grep "$2" /etc/systemd/system/multi-user.target.wants)"]]
+    if [[ -z "$(grep "$2" /etc/systemd/system/multi-user.target.wants)" ]]
       then
         echo "Error: $2 does not exist! Check spelling or enable the service."
       return 1
