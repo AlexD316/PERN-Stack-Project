@@ -13,7 +13,7 @@ service_check () {
       return 1
     fi
     echo "$2 service is running on boot!"
-    systemctl status "$2.service" 
+    systemctl status "$2" 
     return 0    
 }
 
