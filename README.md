@@ -44,6 +44,10 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+Then set the service to run on the start of boot:
+```
+sudo systemctl enable <name_of_choosing>.service
+```
 
 ## Express Installation
 Make sure that nodejs is already installed. Here are the steps to set up express:
