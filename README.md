@@ -46,7 +46,7 @@ WantedBy=multi-user.target
 ```
 Then set the service to run on the start of boot:
 ```
-sudo systemctl enable <name_of_choosing>.service
+sudo systemctl enable <nameofchoosing>.service
 ```
 
 ## Express Installation
