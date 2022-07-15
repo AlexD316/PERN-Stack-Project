@@ -13,7 +13,7 @@ service_check () {
       return 1
     fi
     echo "$2 service is running on boot!"
-    systemctl status "$2" 
+    systemctl status "$2"
     return 0    
 }
 
@@ -28,7 +28,7 @@ case "$1" in
         print_usage
         ;;
     -d )
-        service_check
+        service_check "$@"
         ;;
      * )
         echo "ERROR: Invalid option: $1"
